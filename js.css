@@ -1,0 +1,91 @@
+body {
+	background-image: url(springbg.jpg);
+	background-size: cover;
+	background-repeat: repeat-y;
+}
+#specials {
+	width: 10em;
+	float: right;
+	padding: .5em 1em;
+	border: medium #006400 groove;
+	border-radius: 10px;
+	margin-left: 1em;
+}
+#container {
+	width: 50em;
+	margin: 1em auto;
+	border: outset thick darkgreen;
+	background-color: rgba(255,255,255,.9);
+	padding: 1em;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.error {
+	color: red;
+}
+a:link {
+	color: darkgreen;
+}
+a:visited {
+	color: darkgreen;
+}
+legend {
+	font-family: "Comic Sans MS";
+	color: darkgreen;
+}
+h1, h2, h3 {
+	color: darkgreen;
+	text-align: center;
+	line-height: .7em;
+	font-family: "Comic Sans MS";
+}
+label {
+	display: inline-block;
+	width: 20em;
+	text-align: right;
+	line-height: 1.5em;
+	padding-right: 1em;
+}
+th[colspan] {
+	text-align: right;
+}
+table {
+	border: thin solid darkgreen;
+	background-color: cornsilk;
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+td, th {
+	padding: .25em 1em;
+	border: thin green dotted;}
+td[id] {
+	text-align: right;
+}
+input[type='submit'] {
+	background-color: cornsilk;
+	font-size: .8em;
+	border-radius: 5px;
+	border: thin outset darkgreen;
+}
+#place {
+	text-align: center;
+}
+#main {clear: left;}
+.Fall {
+	background-image: url(fall.png);
+	background-size: 100% 100%;
+	background-color: cornsilk;
+	text-align: center;
+}
+.Winter {
+	background-color: lightblue;
+	text-align: center;
+}
+.Summer {
+	background-color: #ff9;
+	text-align: center;
+}
+.Spring {
+	background-color: #afeeee;
+	text-align: center;
+}
+
