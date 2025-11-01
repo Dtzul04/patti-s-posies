@@ -1,3 +1,5 @@
+console.log("✅ jquery-intro.js loaded");
+
 $(document).ready(function() {
   var months = [
     'January', 'February', 'March', 'April', 'May', 'June',
@@ -30,46 +32,50 @@ $(document).ready(function() {
   var monthIndex = now.getMonth();
   var monthName = months[monthIndex];
 
-  var season, seasonColor, seasonIndex;
+  var season, seasonColor, seasonIndex, bgImage;
 
   switch (monthIndex) {
-    case 11: // December
-    case 0:  // January
-    case 1:  // February
+    case 11:
+    case 0:  
+    case 1:  
       season = "Winter";
       seasonColor = "#00f";
       seasonIndex = 0;
+      bgImage = "winterbg.jpg";
       break;
 
-    case 2: // March
-    case 3: // April
-    case 4: // May
+    case 2: 
+    case 3: 
+    case 4: 
       season = "Spring";
       seasonColor = "#d7d";
       seasonIndex = 1;
+      bgImage = "springbg.jpg";
       break;
 
-    case 5: // June
-    case 6: // July
-    case 7: // August
+    case 5: 
+    case 6: 
+    case 7: 
       season = "Summer";
       seasonColor = "#006400";
       seasonIndex = 2;
+      bgImage = "summerbg.jpg";
       break;
 
-    case 8: // September
-    case 9: // October
-    case 10: // November
+    case 8: 
+    case 9: 
+    case 10: 
       season = "Fall";
       seasonColor = "#930";
       seasonIndex = 3;
+      bgImage = "fallbg.jpg";
       break;
   }
 
   console.log("The current month is:", monthName);
 
   if (monthName === "December") {
-    $("h2").after("<h3>Happy Holidays!</h3>");
+    $("h2#slogan").after("<h3>Happy Holidays!</h3>");
   }
 
   $("#month").text("Tips for " + monthName);
@@ -78,7 +84,17 @@ $(document).ready(function() {
   $("#copy").append(" " + year);
 
   $("#specials").addClass(season.toLowerCase());
+
   $("#specials").html("<h3>Specials</h3>" + specials[monthIndex]);
+
   $("#seasontips").html(tips[seasonIndex]);
+
   $("strong, h1, h2, h3").css("color", seasonColor);
+
+  $("body").css({
+    "background-image": "url('" + bgImage + "')",
+    "background-repeat": "no-repeat",
+    "background-size": "cover",
+    "background-position": "center center"
+  });
 });
